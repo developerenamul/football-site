@@ -1,0 +1,232 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --banner-bg-color:linear-gradient(45deg,cyan,green);
+    --btn-bg:orange;
+    --main-color:#fff;
+}
+
+/* common style */
+
+body{
+    font-family: 'Poppins',
+    sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 870px;
+}
+
+
+/* *****************
+banner section
+********************* */
+.banner{
+    background: var(--banner-bg-color);
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-text {
+    width: 50%;
+    padding: 0 40px ;
+}
+.banner-title{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.banner-img img{
+    Width: 375px;
+    Height:275px;
+}
+.primary-btn{
+    color: orange;
+    padding: 10px 20px;
+    display: inline-block;
+    border: 2px solid #fff;
+    margin: 25px 0;
+    transition: .3s ease-in-out;
+}
+.primary-btn:hover{
+    background: orange;
+    color: var(--main-color);
+}
+/* media queries */
+.container{
+    width: 1170px;
+}
+@media (max-width:688px){
+    
+   .banner-content{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .banner-text{
+        margin-right: 0;
+        width: 80%;
+    }
+
+    .banner-img{
+        width: 80%;
+    }
+  
+}
+
+
+/* *************
+
+main section start
+
+*************** */
+
+.album {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px;
+    align-items: center;
+}
+.main-content{
+    display: flex;
+
+}
+.photo-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+.biography{
+    padding: 15px;
+    background: var(--main-color);
+    border: 2px solid grey;
+}
+.bio-title{
+    font-size: 28px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+.bio-img img{
+    width:100%;
+   height: auto;
+}
+
+/* media quries */
+.container{
+    width: 100%;
+}
+
+@media (max-width:688px) {
+    .photo-container{
+       display: flex;
+       flex-direction: column;
+    }
+    
+
+}
+@media (max-width:992px) {
+    .photo-container{
+       grid-template-columns: repeat(2, 1fr);
+    }
+    
+
+}
+
+/* ***********
+
+membership section
+
+************ */
+
+.memberShip{
+    padding: 40px;
+}
+.m-title{
+    text-align: center;
+    padding: 15px 0;
+    font-size: 40px;
+    color: gold;
+    letter-spacing: 10px;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 330px;
+    padding: 15px;
+    border: 2px solid orange;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.card img{
+    width: 100%;
+}
+.btn-center{
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width:688px){
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* ***********
+working with footer section
+**************** */
+footer{
+    padding: 40px;
+}
+.footer-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-logo img{
+    width: 100%;
+}
+.footer-links{
+    padding: 15px 0;
+}
+.footer-links .round{
+    height: 30px;
+    width: 30px;
+    background: #ddd;
+    padding: 3px;
+    font-size: 20px;
+    line-height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 3px;
+    color: darkgray;
+}
+.footer-box{
+    width: 350px;
+    text-align: center;
+}
